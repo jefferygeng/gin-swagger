@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"github.com/gin-contrib/gzip"
-	"github.com/swaggo/swag"
+	"github.com/jefferygeng/swag"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
-	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"github.com/jefferygeng/gin-swagger/swaggerFiles"
 )
 
 type mockedSwag struct{}
@@ -24,7 +24,7 @@ func TestWrapHandler(t *testing.T) {
 	gin.SetMode(gin.TestMode)
 	router := gin.New()
 
-	router.GET("/*any", WrapHandler(swaggerFiles.Handler, URL("https://github.com/swaggo/gin-swagger")))
+	router.GET("/*any", WrapHandler(swaggerFiles.Handler, URL("https://github.com/jefferygeng/gin-swagger")))
 
 	w1 := performRequest("GET", "/index.html", router)
 	assert.Equal(t, 200, w1.Code)
