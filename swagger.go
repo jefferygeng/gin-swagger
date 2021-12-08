@@ -11,7 +11,7 @@ import (
 	"golang.org/x/net/webdav"
 
 	"github.com/gin-gonic/gin"
-	"github.com/swaggo/swag"
+	"github.com/jefferygeng/swag"
 )
 
 type swaggerConfig struct {
